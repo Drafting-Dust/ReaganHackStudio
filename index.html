@@ -206,7 +206,6 @@
   <nav>
     <a href="#studio">Studio</a>
     <a href="#services">Services</a>
-    <a href="#work">Work</a>
     <a href="#inquire" class="nav-cta">Inquire</a>
   </nav>
   <button class="menu-btn" onclick="document.querySelector('#inquire').scrollIntoView()">Inquire</button>
@@ -298,42 +297,6 @@
   </div>
 </section>
 
-<section class="work" id="work">
-  <div class="wrap">
-    <div class="work-head reveal">
-      <p class="label">Selected Work</p>
-      <h2>Projects &amp; renders</h2>
-    </div>
-    <div class="work-grid">
-      <div class="tile reveal">
-        <div class="tile-inner">
-          <span class="tile-no">Project 01</span>
-          <div><div class="tile-title">Residential<br>Living</div><span class="tile-tag">Charlotte, NC</span></div>
-        </div>
-      </div>
-      <div class="tile tall reveal" style="transition-delay:.1s">
-        <div class="tile-inner">
-          <span class="tile-no">Project 02</span>
-          <div><div class="tile-title">Studio<br>Kitchen</div><span class="tile-tag">Render · D5</span></div>
-        </div>
-      </div>
-      <div class="tile tall reveal" style="transition-delay:.05s">
-        <div class="tile-inner">
-          <span class="tile-no">Project 03</span>
-          <div><div class="tile-title">Boutique<br>Retail</div><span class="tile-tag">Commercial</span></div>
-        </div>
-      </div>
-      <div class="tile reveal" style="transition-delay:.12s">
-        <div class="tile-inner">
-          <span class="tile-no">Project 04</span>
-          <div><div class="tile-title">Curated<br>Gallery Wall</div><span class="tile-tag">Art Curation</span></div>
-        </div>
-      </div>
-    </div>
-    <p class="placeholder-note reveal">These tiles are placeholders. Drop in your own project photography or renders to replace each one.</p>
-  </div>
-</section>
-
 <section class="inquiry" id="inquire">
   <div class="wrap">
     <div class="inq-grid">
@@ -342,14 +305,16 @@
         <h2>Let's make <em>something.</em></h2>
         <p class="inq-intro">Tell us a little about your space and what you have in mind. We read every inquiry and reply within two business days.</p>
         <div class="inq-detail">
-          <a href="mailto:hello@reaganhackstudio.com">hello@reaganhackstudio.com</a><br>
+          <a href="mailto:hackreagan@outlook.com">hackreagan@outlook.com</a><br>
           <a href="https://instagram.com/reaganhackstudio" target="_blank" rel="noopener">@reaganhackstudio</a><br>
           Charlotte, North Carolina
         </div>
       </div>
 
       <div class="reveal" style="transition-delay:.12s">
-        <form id="inquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="inquiryForm" action="https://formspree.io/f/mpqeapjy" method="POST">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="New inquiry from the Reagan Hack Studio website">
           <div class="row">
             <div class="field">
               <label for="name">Full name</label>
@@ -410,7 +375,6 @@
       <div class="foot-links">
         <a href="#studio">Studio</a>
         <a href="#services">Services</a>
-        <a href="#work">Work</a>
         <a href="https://instagram.com/reaganhackstudio" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
@@ -458,7 +422,7 @@
         'Location: ' + data.get('location') + '\n\n' +
         data.get('message')
       );
-      window.location.href = 'mailto:hello@reaganhackstudio.com?subject=' +
+      window.location.href = 'mailto:hackreagan@outlook.com?subject=' +
         encodeURIComponent('New project inquiry') + '&body=' + body;
       return;
     }
