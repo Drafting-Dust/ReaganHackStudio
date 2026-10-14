@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reagan Hack Studio — Interior Architecture &amp; Art Curation</title>
-<meta name="description" content="Reagan Hack Studio is an interior architecture, design and art curation practice creating considered, lasting interiors.">
+<title>Reagan Hack Studio · Under Construction</title>
+<meta name="description" content="Reagan Hack Studio is under construction while the studio is busy with studio projects. New interior architecture work is coming soon.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%238A1C24'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%23F5F1E8'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bone:#F5F1E8;
@@ -16,9 +17,11 @@
     --ink-soft:#5E564B;
     --oxblood:#8A1C24;
     --oxblood-deep:#6E141B;
+    --blush:#E8A0A6;
     --line:rgba(28,24,21,.16);
     --display:'Fraunces',Georgia,serif;
     --body:'Hanken Grotesk',-apple-system,sans-serif;
+    --hand:'Caveat','Bradley Hand',cursive;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -56,114 +59,111 @@
   }
   .mark .name{font-family:var(--display);font-size:1.05rem;font-weight:500;letter-spacing:.02em;line-height:1}
   .mark .name small{display:block;font-family:var(--body);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;font-weight:500}
-  nav{display:flex;gap:34px;align-items:center}
-  nav a{text-decoration:none;color:var(--ink);font-size:.82rem;letter-spacing:.04em;position:relative;padding:4px 0}
-  nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--oxblood);transition:width .35s ease}
-  nav a:hover::after{width:100%}
-  .nav-cta{border:1px solid var(--ink);border-radius:40px;padding:9px 20px!important;transition:all .3s ease}
-  .nav-cta:hover{background:var(--oxblood);border-color:var(--oxblood);color:var(--bone)!important}
-  .nav-cta::after{display:none}
-  .menu-btn{display:none;background:none;border:none;font-family:var(--body);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;color:var(--ink)}
+  .nav-cta{
+    text-decoration:none;color:var(--ink);font-size:.82rem;letter-spacing:.04em;
+    border:1px solid var(--ink);border-radius:40px;padding:9px 20px;transition:all .3s ease;
+  }
+  .nav-cta:hover{background:var(--oxblood);border-color:var(--oxblood);color:var(--bone)}
 
   /* ---------- hero ---------- */
-  .hero{padding:200px 0 90px;position:relative}
-  .hero-grid{display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px}
+  .hero{padding:170px 0 40px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
   .hero h1{
-    font-family:var(--display);font-weight:300;
-    font-size:clamp(3rem,11vw,9.5rem);line-height:.92;letter-spacing:-.02em;
+    font-family:var(--display);font-weight:300;margin-top:18px;
+    font-size:clamp(2.8rem,6.4vw,6rem);line-height:.95;letter-spacing:-.02em;
   }
-  .hero h1 em{font-style:italic;color:var(--oxblood);font-weight:400}
-  .hero-meta{text-align:right;font-size:.82rem;color:var(--ink-soft);line-height:1.8;min-width:180px}
-  .hero-meta strong{display:block;color:var(--ink);font-weight:500}
+  .hero h1 em{
+    font-style:italic;color:var(--oxblood);font-weight:400;padding-bottom:.06em;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='10'%3E%3Cpath d='M0 5 Q9.5 0 19 5 T38 5' fill='none' stroke='%23E8A0A6' stroke-width='3'/%3E%3C/svg%3E") repeat-x 0 100%/38px 10px;
+  }
+  .scribble{
+    display:inline-flex;align-items:flex-start;gap:4px;margin:4px 0 0 clamp(3.5rem,12vw,11rem);
+    font-family:var(--hand);font-weight:600;font-size:1.65rem;line-height:1;color:var(--oxblood);transform:rotate(-4deg);
+  }
+  .scribble svg{width:44px;height:36px;flex:none;fill:none;stroke:var(--oxblood);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .scribble span{padding-top:20px}
   .hero-sub{
-    margin-top:54px;max-width:620px;font-size:1.18rem;line-height:1.65;color:var(--ink-soft);
-    font-weight:300;border-top:1px solid var(--line);padding-top:28px;
+    margin-top:30px;max-width:560px;font-size:1.12rem;line-height:1.65;color:var(--ink-soft);
+    font-weight:300;border-top:1px solid var(--line);padding-top:24px;
   }
   .hero-sub b{color:var(--ink);font-weight:500}
 
-  /* ---------- marquee ---------- */
-  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;margin-top:70px;background:var(--bone-deep)}
-  .marquee-track{display:flex;gap:48px;width:max-content;animation:scroll 32s linear infinite}
-  .marquee-track span{font-family:var(--display);font-style:italic;font-size:1.25rem;color:var(--ink);display:flex;align-items:center;gap:48px;white-space:nowrap}
-  .marquee-track span::after{content:"✦";color:var(--oxblood);font-style:normal;font-size:.7rem}
+  /* status card */
+  .status{margin-top:26px;max-width:560px;display:grid;grid-template-columns:1fr 1fr;column-gap:28px}
+  .status div{padding:14px 0;border-bottom:1px solid var(--line)}
+  .k{display:block;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;margin-bottom:2px}
+  .v{font-family:var(--display);font-size:1.15rem;font-weight:400}
+  .v em{font-style:italic;color:var(--oxblood)}
+
+  /* progress */
+  .progress{margin-top:26px;max-width:560px}
+  .progress-top{display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+  .hand{font-family:var(--hand);font-weight:600;font-size:1.3rem;line-height:1;color:var(--oxblood)}
+  .bar{margin-top:10px;height:16px;padding:2px;border:1px solid var(--ink);border-radius:20px;background:var(--bone-deep);overflow:hidden}
+  .bar span{
+    display:block;height:100%;width:62%;border-radius:20px;background-color:var(--oxblood);
+    background-image:linear-gradient(45deg,var(--blush) 25%,transparent 25%,transparent 50%,var(--blush) 50%,var(--blush) 75%,transparent 75%);
+    background-size:16px 16px;
+    animation:grow 1.8s .5s cubic-bezier(.2,.7,.2,1) both,stripes 1s linear infinite;
+  }
+  @keyframes grow{from{width:0}}
+  @keyframes stripes{to{background-position:16px 0}}
+
+  /* buttons */
+  .actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;text-decoration:none;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+    padding:15px 34px;border-radius:40px;transition:all .3s ease;
+    background:var(--oxblood);color:var(--bone);border:1px solid var(--oxblood);
+  }
+  .btn:hover{background:var(--blush);border-color:var(--blush);color:var(--ink)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn.ghost:hover{background:var(--oxblood);border-color:var(--oxblood);color:var(--bone)}
+
+  /* ---------- desk illustration ---------- */
+  .desk{width:100%;max-width:620px;height:auto;display:block;margin-left:auto;overflow:visible}
+  .desk .f-bone{fill:var(--bone)}
+  .desk .f-bone-deep{fill:var(--bone-deep)}
+  .desk .f-blush{fill:var(--blush)}
+  .desk .f-ox{fill:var(--oxblood)}
+  .desk .f-ox-deep{fill:var(--oxblood-deep)}
+  .desk .f-ink{fill:var(--ink)}
+  .desk .s-ink{stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+  .desk .s-ox{stroke:var(--oxblood);stroke-width:1.4;stroke-linejoin:round;stroke-linecap:round;fill:none}
+  .desk .s-soft{stroke:var(--ink-soft);stroke-width:1;fill:none}
+  .desk .note-text{font-family:var(--hand);fill:var(--ink)}
+  .desk .tiny{font-family:var(--body);font-weight:600;font-size:6.5px;letter-spacing:.9px;fill:var(--ink)}
+  .steam{fill:none;stroke:var(--ink-soft);stroke-width:2.2;stroke-linecap:round;transform-box:fill-box;animation:steam 3s ease-in-out infinite;opacity:0}
+  .steam.d2{animation-delay:1s}
+  .steam.d3{animation-delay:2s}
+  @keyframes steam{0%{opacity:0;transform:translateY(6px)}35%{opacity:.75}100%{opacity:0;transform:translateY(-16px)}}
+  .sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 4s ease-in-out infinite}
+  .sway.b{animation-duration:5s;animation-delay:-2s}
+  @keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+  .tw{transform-box:fill-box;transform-origin:center;animation:twinkle 2.6s ease-in-out infinite}
+  .tw.d2{animation-delay:.7s}
+  .tw.d3{animation-delay:1.4s}
+  .tw.d4{animation-delay:2s}
+  @keyframes twinkle{0%,100%{transform:scale(.5);opacity:.35}50%{transform:scale(1);opacity:1}}
+
+  /* ---------- caution tape ---------- */
+  .tapes{position:relative;height:230px;overflow:hidden;margin-top:30px}
+  .tape{position:absolute;left:-10%;width:120%;top:50%;padding:15px 0;overflow:hidden}
+  .tape::before,.tape::after{content:"";position:absolute;left:0;right:0;height:7px}
+  .tape::before{top:0}
+  .tape::after{bottom:0}
+  .tape-a{background:var(--oxblood);color:var(--bone);transform:translateY(-50%) rotate(-4deg);z-index:2;box-shadow:0 6px 18px rgba(28,24,21,.12)}
+  .tape-a::before,.tape-a::after{background:repeating-linear-gradient(-45deg,var(--bone) 0 9px,transparent 9px 18px);opacity:.85}
+  .tape-b{background:var(--blush);color:var(--ink);transform:translateY(-50%) rotate(3deg)}
+  .tape-b::before,.tape-b::after{background:repeating-linear-gradient(45deg,var(--oxblood) 0 9px,transparent 9px 18px)}
+  .tape-track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+  .tape-b .tape-track{animation-direction:reverse;animation-duration:48s}
+  .tape-track span{display:flex;align-items:center;gap:40px;padding-right:40px;white-space:nowrap}
+  .tape-track span::after{content:"✦";font-size:.7rem}
+  .tape-a .tape-track span{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600}
+  .tape-b .tape-track span{font-family:var(--display);font-style:italic;font-size:1.2rem}
+  .tape-b .tape-track span::after{color:var(--oxblood);font-style:normal}
   @keyframes scroll{to{transform:translateX(-50%)}}
-
-  /* ---------- studio ---------- */
-  .studio{padding:120px 0}
-  .studio-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
-  .studio h2{font-family:var(--display);font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.01em;margin-top:18px}
-  .studio h2 em{font-style:italic;color:var(--oxblood)}
-  .studio p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:22px;font-weight:300}
-  .studio p:last-child{margin-bottom:0}
-  .studio .lead{font-size:1.32rem;color:var(--ink);font-family:var(--display);font-weight:300;line-height:1.45}
-
-  /* ---------- services ---------- */
-  .services{padding:110px 0;border-top:1px solid var(--line)}
-  .services-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:60px;flex-wrap:wrap;gap:20px}
-  .services-head h2{font-family:var(--display);font-weight:300;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.01em}
-  .svc{
-    display:grid;grid-template-columns:80px 1fr 1.4fr;gap:30px;align-items:start;
-    padding:38px 0;border-top:1px solid var(--line);transition:padding-left .4s ease;
-  }
-  .svc:last-child{border-bottom:1px solid var(--line)}
-  .svc:hover{padding-left:14px}
-  .svc-no{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--oxblood)}
-  .svc h3{font-family:var(--display);font-weight:400;font-size:1.7rem;letter-spacing:-.01em}
-  .svc p{color:var(--ink-soft);font-size:.98rem;font-weight:300}
-
-  /* ---------- work ---------- */
-  .work{padding:110px 0;border-top:1px solid var(--line)}
-  .work-head{margin-bottom:54px}
-  .work-head h2{font-family:var(--display);font-weight:300;font-size:clamp(2rem,4vw,3rem);margin-top:16px}
-  .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-  .tile{position:relative;border-radius:4px;overflow:hidden;background:var(--bone-deep);border:1px solid var(--line);aspect-ratio:4/3;cursor:pointer;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-  .tile.tall{aspect-ratio:4/5}
-  .tile:hover{transform:translateY(-6px)}
-  .tile-inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:26px;background:
-     repeating-linear-gradient(135deg,transparent,transparent 22px,rgba(138,28,36,.05) 22px,rgba(138,28,36,.05) 23px),
-     linear-gradient(160deg,var(--bone-deep),#e3dac6)}
-  .tile-no{font-family:var(--display);font-style:italic;color:var(--oxblood);font-size:.9rem}
-  .tile-title{font-family:var(--display);font-size:1.6rem;font-weight:400;line-height:1.1}
-  .tile-tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
-  .placeholder-note{margin-top:30px;font-size:.85rem;color:var(--ink-soft);font-style:italic;font-family:var(--display)}
-
-  /* ---------- inquiry ---------- */
-  .inquiry{padding:120px 0;border-top:1px solid var(--line);background:var(--ink);color:var(--bone);position:relative;margin-top:60px}
-  .inquiry .wrap{position:relative;z-index:2}
-  .inq-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
-  .inquiry h2{font-family:var(--display);font-weight:300;font-size:clamp(2.4rem,5vw,4rem);line-height:1;letter-spacing:-.02em}
-  .inquiry h2 em{font-style:italic;color:#E8A0A6}
-  .inq-intro{margin-top:28px;color:rgba(245,241,232,.7);font-size:1.05rem;font-weight:300;max-width:380px}
-  .inq-detail{margin-top:40px;font-size:.9rem;line-height:2;color:rgba(245,241,232,.65)}
-  .inq-detail a{color:var(--bone);text-decoration:none;border-bottom:1px solid rgba(245,241,232,.3)}
-  .inq-detail a:hover{border-color:#E8A0A6}
-  .inquiry .label{color:#E8A0A6}
-
-  form{display:grid;gap:22px}
-  .field{display:flex;flex-direction:column;gap:8px}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  label{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,241,232,.6)}
-  input,select,textarea{
-    background:transparent;border:none;border-bottom:1px solid rgba(245,241,232,.28);
-    color:var(--bone);font-family:var(--body);font-size:1rem;padding:10px 0;transition:border-color .3s ease;
-  }
-  input:focus,select:focus,textarea:focus{outline:none;border-color:#E8A0A6}
-  select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%23E8A0A6'%3E%3Cpath d='M7 10L2 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right center}
-  select option{background:var(--ink);color:var(--bone)}
-  textarea{resize:vertical;min-height:90px;border:1px solid rgba(245,241,232,.28);padding:14px;border-radius:3px}
-  .submit{
-    justify-self:start;margin-top:8px;background:var(--oxblood);color:var(--bone);border:none;
-    font-family:var(--body);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
-    padding:16px 40px;border-radius:40px;cursor:pointer;transition:all .3s ease;
-  }
-  .submit:hover{background:#E8A0A6;color:var(--ink)}
-  .submit:disabled{opacity:.5;cursor:wait}
-  .form-status{font-size:.92rem;min-height:1.2em;color:#E8A0A6}
-  .form-success{
-    display:none;padding:40px;border:1px solid rgba(245,241,232,.28);border-radius:4px;text-align:center;
-  }
-  .form-success h3{font-family:var(--display);font-weight:300;font-size:1.8rem;margin-bottom:10px}
-  .form-success p{color:rgba(245,241,232,.7);font-weight:300}
 
   /* ---------- footer ---------- */
   footer{padding:70px 0 50px}
@@ -178,21 +178,30 @@
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
+  .scribble.reveal.in{transform:rotate(-4deg)}
 
   /* ---------- responsive ---------- */
   @media(max-width:900px){
     .wrap{padding:0 24px}
     header{padding:18px 24px}
-    nav{display:none}
-    .menu-btn{display:block}
-    .hero{padding:150px 0 60px}
-    .hero-grid{grid-template-columns:1fr}
-    .hero-meta{text-align:left}
-    .studio-grid,.inq-grid{grid-template-columns:1fr;gap:40px}
-    .work-grid{grid-template-columns:1fr}
-    .svc{grid-template-columns:50px 1fr;gap:18px}
-    .svc p{grid-column:1/-1}
-    .row{grid-template-columns:1fr}
+    header.scrolled{padding:12px 24px}
+    .hero{padding:130px 0 20px}
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .desk{margin:0 auto}
+    .tapes{height:200px;margin-top:0}
+    .tape-a{transform:translateY(-50%) rotate(-9deg)}
+    .tape-b{transform:translateY(-50%) rotate(7deg)}
+  }
+  @media(max-width:420px){
+    .mark .name small{display:none}
+    .status{grid-template-columns:1fr}
+    .btn{padding:14px 26px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    .steam{opacity:.6}
   }
 </style>
 </head>
@@ -203,178 +212,201 @@
     <span class="glyph">R</span>
     <span class="name">Reagan Hack Studio<small>Interior Architecture</small></span>
   </a>
-  <nav>
-    <a href="#studio">Studio</a>
-    <a href="#services">Services</a>
-    <a href="#inquire" class="nav-cta">Inquire</a>
-  </nav>
-  <button class="menu-btn" onclick="document.querySelector('#inquire').scrollIntoView()">Inquire</button>
+  <a href="mailto:hackreagan@outlook.com" class="nav-cta">Say hi</a>
 </header>
 
+<main>
 <section class="hero" id="top">
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <p class="label reveal">Interior Architecture · Design · Art Curation</p>
-        <h1 class="reveal" style="transition-delay:.08s">Spaces<br>with a <em>point<br>of view.</em></h1>
+        <p class="label reveal">Under Construction · <span style="white-space:nowrap">Studio No. 001</span></p>
+        <h1 class="reveal" style="transition-delay:.08s">Be right back,<br>I'm <em>in studio.</em></h1>
+        <p class="scribble reveal" style="transition-delay:.3s">
+          <svg viewBox="0 0 44 36" aria-hidden="true"><path d="M40 31 C28 31 14 25 10 6 M10 6 L5 16 M10 6 L18 12"/></svg>
+          <span>send coffee ♡</span>
+        </p>
+        <p class="hero-sub reveal" style="transition-delay:.18s">
+          Reagan Hack Studio is getting a little glow up while I'm heads down in <b>studio projects</b>: trace paper everywhere, <b>renders</b> cooking overnight and far too many cups of hot coffee. New work is on its way, so check back soon.
+        </p>
+        <div class="status reveal" style="transition-delay:.24s">
+          <div><span class="k">Currently</span><span class="v">In studio, <em>as always</em></span></div>
+          <div><span class="k">Working on</span><span class="v">Studio projects</span></div>
+          <div><span class="k">Fueled by</span><span class="v">Hot coffee, <em>obviously</em></span></div>
+          <div><span class="k">Back</span><span class="v">Soon, <em>pinky promise</em></span></div>
+        </div>
+        <div class="progress reveal" style="transition-delay:.3s">
+          <div class="progress-top">
+            <span class="k">Site progress</span>
+            <span class="hand">still sketching ✎</span>
+          </div>
+          <div class="bar" role="img" aria-label="Site progress, still sketching"><span></span></div>
+        </div>
+        <div class="actions reveal" style="transition-delay:.36s">
+          <a class="btn" href="mailto:hackreagan@outlook.com">Say hi</a>
+          <a class="btn ghost" href="https://instagram.com/reaganhackstudio" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
-      <div class="hero-meta reveal" style="transition-delay:.18s">
-        <strong>Reagan Hack Studio, LLC</strong>
-        Charlotte, North Carolina<br>
-        Est. 2026<br><br>
-        <strong>Studio No.</strong>
-        001
+
+      <div class="reveal" style="transition-delay:.2s">
+        <svg class="desk" id="desk" viewBox="0 0 560 500" role="img" aria-label="Illustration of a drafting desk: a floor plan being sketched on trace paper, a pencil, a set square, sticky notes and a steaming mug of coffee">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M20 0H0V20" fill="none" style="stroke:var(--bone)" stroke-opacity=".6" stroke-width="1"/>
+            </pattern>
+            <path id="spark" d="M0-10C1.4-2 2-1.4 10 0 2 1.4 1.4 2 0 10-1.4 2-2 1.4-10 0-2-1.4-1.4-2 0-10Z"/>
+            <path id="heart" d="M0 4C-7-2-6-9 0-5 6-9 7-2 0 4Z"/>
+          </defs>
+
+          <!-- soft backdrop -->
+          <circle cx="290" cy="250" r="222" class="f-blush" opacity=".28"/>
+
+          <!-- cutting mat -->
+          <g transform="rotate(-5 290 245)">
+            <rect x="60" y="80" width="460" height="330" rx="20" class="f-blush" opacity=".6"/>
+            <rect x="60" y="80" width="460" height="330" rx="20" fill="url(#grid)"/>
+            <rect x="60" y="80" width="460" height="330" rx="20" class="s-ink" fill="none"/>
+          </g>
+
+          <!-- set square -->
+          <g transform="translate(70 420) rotate(-14)">
+            <path d="M0 0H130L0-95ZM20-15V-60L82-15Z" fill-rule="evenodd" class="f-ox s-ox" fill-opacity=".16"/>
+            <path d="M10 0v-5M20 0v-5M30 0v-5M40 0v-5M50 0v-9M60 0v-5M70 0v-5M80 0v-5M90 0v-5M100 0v-9M110 0v-5M120 0v-5" class="s-ox" stroke-width="1"/>
+          </g>
+
+          <!-- trace paper with the plan -->
+          <g transform="rotate(3 280 225)">
+            <rect x="124" y="111" width="320" height="240" rx="4" class="f-ink" opacity=".08"/>
+            <rect x="120" y="105" width="320" height="240" rx="4" class="f-bone s-ink"/>
+            <rect x="98" y="97" width="46" height="16" class="f-ox" opacity=".75" transform="rotate(-40 121 105)"/>
+            <rect x="417" y="97" width="46" height="16" class="f-ox" opacity=".75" transform="rotate(40 440 105)"/>
+
+            <path id="plan" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" fill="none" class="s-ink" stroke-width="2.2"
+              d="M250 300L400 300L400 135L150 135L150 300L212 300L212 262A38 38 0 0 1 250 300L290 300L290 215L400 215L400 135L250 135L250 190">
+              <animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;.72;1" dur="9s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="1;1;0" keyTimes="0;.92;1" dur="9s" repeatCount="indefinite"/>
+            </path>
+
+            <g>
+              <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.72;.78;.92;1" dur="9s" repeatCount="indefinite"/>
+              <!-- dimension string -->
+              <path d="M150 125V131M400 125V131M150 122H400M146 126L154 118M396 126L404 118" class="s-soft"/>
+              <text x="275" y="118" text-anchor="middle" class="note-text" font-size="12" style="fill:var(--ink-soft)">lots of coffee</text>
+              <!-- bed -->
+              <rect x="335" y="228" width="52" height="62" rx="3" class="s-ox"/>
+              <rect x="340" y="232" width="42" height="12" rx="3" class="s-ox"/>
+              <!-- sofa -->
+              <rect x="165" y="244" width="62" height="24" rx="6" class="s-ox"/>
+              <path d="M171 252H221" class="s-ox"/>
+              <!-- table and chairs -->
+              <circle cx="200" cy="182" r="16" class="s-ox"/>
+              <circle cx="200" cy="160" r="5" class="s-ox"/>
+              <circle cx="200" cy="204" r="5" class="s-ox"/>
+              <circle cx="178" cy="182" r="5" class="s-ox"/>
+              <circle cx="222" cy="182" r="5" class="s-ox"/>
+              <!-- plant -->
+              <circle cx="382" cy="155" r="9" class="s-ox"/>
+              <path d="M382 146V164M373 155H391M376 149L388 161M388 149L376 161" class="s-ox" stroke-width="1"/>
+              <!-- you are here -->
+              <use href="#heart" class="f-ox" transform="translate(312 172) scale(1.7)"/>
+              <text x="324" y="182" class="note-text" font-size="12" style="fill:var(--oxblood)">you are here</text>
+            </g>
+
+            <!-- north arrow -->
+            <circle cx="165" cy="326" r="9" class="s-soft"/>
+            <path d="M165 318L169 331L165 328L161 331Z" class="f-ink"/>
+            <text x="165" y="314" text-anchor="middle" class="tiny">N</text>
+            <!-- title block -->
+            <rect x="330" y="310" width="95" height="28" class="s-soft"/>
+            <path d="M330 323H425" class="s-soft"/>
+            <text x="336" y="319.5" class="tiny">UNDER CONSTRUCTION</text>
+            <text x="336" y="333" class="tiny">A101 · SCALE: CUTE</text>
+          </g>
+
+          <!-- coffee -->
+          <ellipse cx="474" cy="442" rx="38" ry="6" class="f-ink" opacity=".1"/>
+          <path d="M503 390c24 0 24 34 0 34" fill="none" style="stroke:var(--ink)" stroke-width="12"/>
+          <path d="M503 390c24 0 24 34 0 34" fill="none" style="stroke:var(--oxblood)" stroke-width="7"/>
+          <rect x="440" y="372" width="64" height="66" rx="12" class="f-ox s-ink"/>
+          <ellipse cx="472" cy="373" rx="32" ry="8" class="f-ox-deep s-ink"/>
+          <ellipse cx="472" cy="374" rx="25" ry="4.5" class="f-ink"/>
+          <use href="#heart" class="f-blush" transform="translate(472 406) scale(2)"/>
+          <path class="steam" d="M458 360c-7-9 7-15 0-25c-7-9 7-15 0-24"/>
+          <path class="steam d2" d="M472 356c-7-9 7-15 0-25c-7-9 7-15 0-24"/>
+          <path class="steam d3" d="M486 360c-7-9 7-15 0-25c-7-9 7-15 0-24"/>
+
+          <!-- pencil, follows the plan as it draws -->
+          <g transform="rotate(3 280 225)">
+            <g>
+              <animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.72;1" calcMode="linear">
+                <mpath href="#plan"/>
+              </animateMotion>
+              <g transform="rotate(-48)">
+                <animateTransform attributeName="transform" type="rotate" values="-50;-44;-50" dur=".5s" repeatCount="indefinite"/>
+                <polygon points="9,-2.6 24,-7 24,7 9,2.6" class="f-bone-deep s-ink"/>
+                <polygon points="0,0 9,-2.6 9,2.6" class="f-ink"/>
+                <rect x="24" y="-7" width="78" height="14" class="f-blush s-ink"/>
+                <path d="M26 0H100" class="s-ox" stroke-width="1" opacity=".5"/>
+                <rect x="102" y="-7" width="10" height="14" class="s-ink" style="fill:var(--ink-soft)"/>
+                <rect x="112" y="-7" width="13" height="14" rx="4" class="f-ox s-ink"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- to do note -->
+          <g transform="translate(8 34) rotate(-8)">
+            <g class="sway">
+              <rect x="4" y="6" width="140" height="132" rx="3" class="f-ink" opacity=".1"/>
+              <rect width="140" height="132" rx="3" class="f-blush s-ink"/>
+              <rect x="47" y="-8" width="46" height="16" class="f-bone" opacity=".85" transform="rotate(-3 70 0)"/>
+              <text x="14" y="32" class="note-text" font-size="23" font-weight="600">to do ♡</text>
+              <rect x="14" y="44" width="11" height="11" rx="2" class="s-ink" fill="none"/>
+              <path d="M16 49l3 3 6-8" class="s-ox" stroke-width="2"/>
+              <text x="32" y="54" class="note-text" font-size="18">coffee</text>
+              <path d="M31 49H76" class="s-ox" stroke-width="1.6"/>
+              <rect x="14" y="65" width="11" height="11" rx="2" class="s-ink" fill="none"/>
+              <text x="32" y="75" class="note-text" font-size="18">finish renders</text>
+              <rect x="14" y="86" width="11" height="11" rx="2" class="s-ink" fill="none"/>
+              <text x="32" y="96" class="note-text" font-size="18">pin up</text>
+              <rect x="14" y="107" width="11" height="11" rx="2" class="s-ink" fill="none"/>
+              <text x="32" y="117" class="note-text" font-size="18">sleep??</text>
+            </g>
+          </g>
+
+          <!-- back soon note -->
+          <g transform="translate(408 18) rotate(7)">
+            <g class="sway b">
+              <rect x="4" y="6" width="124" height="88" rx="3" class="f-ink" opacity=".1"/>
+              <rect width="124" height="88" rx="3" class="f-bone-deep s-ink"/>
+              <rect x="40" y="-8" width="44" height="16" class="f-blush" opacity=".9" transform="rotate(4 62 0)"/>
+              <text x="16" y="44" class="note-text" font-size="27" font-weight="600" style="fill:var(--oxblood)">back soon</text>
+              <text x="16" y="72" class="note-text" font-size="21">xo, R ♡</text>
+            </g>
+          </g>
+
+          <!-- sparkles -->
+          <g transform="translate(34 262)"><use href="#spark" class="f-ox tw"/></g>
+          <g transform="translate(542 238) scale(.8)"><use href="#spark" class="f-ox tw d2"/></g>
+          <g transform="translate(296 26) scale(.9)"><use href="#spark" class="f-ox tw d3"/></g>
+          <g transform="translate(236 478) scale(.7)"><use href="#spark" class="f-ox tw d4"/></g>
+        </svg>
       </div>
     </div>
-    <p class="hero-sub reveal" style="transition-delay:.26s">
-      A practice shaping residential and commercial interiors where <b>architecture, material and art</b> are considered as one. From first concept through realized space, drawn in <b>Revit and CAD</b> and brought to life in <b>Enscape and D5 Render</b>.
-    </p>
   </div>
 </section>
 
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Interior Architecture<span></span></span>
-    <span>Spatial Planning</span>
-    <span>Art Curation</span>
-    <span>Revit + CAD</span>
-    <span>Enscape</span>
-    <span>D5 Render</span>
-    <span>Material Direction</span>
-    <span>Interior Architecture</span>
-    <span>Spatial Planning</span>
-    <span>Art Curation</span>
-    <span>Revit + CAD</span>
-    <span>Enscape</span>
-    <span>D5 Render</span>
-    <span>Material Direction</span>
-  </div>
+<div class="tapes" aria-hidden="true">
+  <div class="tape tape-b"><div class="tape-track" data-words="pardon the trace paper|currently in studio|renders loading|new work soon"></div></div>
+  <div class="tape tape-a"><div class="tape-track" data-words="Under construction|Back soon|Under construction|In studio"></div></div>
 </div>
-
-<section class="studio" id="studio">
-  <div class="wrap">
-    <div class="studio-grid">
-      <div class="reveal">
-        <p class="label">The Studio</p>
-        <h2>Considered interiors, <em>built to last.</em></h2>
-      </div>
-      <div class="reveal" style="transition-delay:.12s">
-        <p class="lead">Reagan Hack Studio is an interior architecture and design practice with a parallel passion for art curation.</p>
-        <p>Every project begins with how a space should feel and how people will move through it. We work closely with each client, translating the way they live or work into floor plans, finishes and furniture that feel inevitable rather than decorated.</p>
-        <p>Drawing on a technical foundation in Revit and CAD and high fidelity visualization through Enscape and D5 Render, the studio lets clients see and walk a room long before it is built. Art is never an afterthought. It is curated alongside the architecture so the finished interior reads as one complete idea.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="services-head reveal">
-      <h2>What we do</h2>
-      <p class="label">Capabilities</p>
-    </div>
-
-    <div class="svc reveal">
-      <span class="svc-no">01</span>
-      <h3>Interior Architecture</h3>
-      <p>Spatial planning, layouts, joinery and built form. We reshape how a space works at the structural level, documented to build standard in Revit and CAD.</p>
-    </div>
-    <div class="svc reveal">
-      <span class="svc-no">02</span>
-      <h3>Interior Design</h3>
-      <p>Material palettes, finishes, lighting, custom furniture and styling. A full interior brought together with a clear and cohesive aesthetic direction.</p>
-    </div>
-    <div class="svc reveal">
-      <span class="svc-no">03</span>
-      <h3>Art Curation</h3>
-      <p>Sourcing and placement of original work and collected pieces, chosen to complete the interior and reflect the people who live or work in it.</p>
-    </div>
-    <div class="svc reveal">
-      <span class="svc-no">04</span>
-      <h3>Visualization &amp; Rendering</h3>
-      <p>Photoreal renders and walkthroughs in Enscape and D5 Render, so every decision can be seen, tested and approved before construction begins.</p>
-    </div>
-  </div>
-</section>
-
-<section class="inquiry" id="inquire">
-  <div class="wrap">
-    <div class="inq-grid">
-      <div class="reveal">
-        <p class="label">Start a Project</p>
-        <h2>Let's make <em>something.</em></h2>
-        <p class="inq-intro">Tell us a little about your space and what you have in mind. We read every inquiry and reply within two business days.</p>
-        <div class="inq-detail">
-          <a href="mailto:hackreagan@outlook.com">hackreagan@outlook.com</a><br>
-          <a href="https://instagram.com/reaganhackstudio" target="_blank" rel="noopener">@reaganhackstudio</a><br>
-          Charlotte, North Carolina
-        </div>
-      </div>
-
-      <div class="reveal" style="transition-delay:.12s">
-        <form id="inquiryForm" action="https://formspree.io/f/mpqeapjy" method="POST">
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <input type="hidden" name="_subject" value="New inquiry from the Reagan Hack Studio website">
-          <div class="row">
-            <div class="field">
-              <label for="name">Full name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="field">
-              <label for="type">Project type</label>
-              <select id="type" name="project_type">
-                <option>Residential Interior</option>
-                <option>Commercial Interior</option>
-                <option>Interior Architecture</option>
-                <option>Art Curation</option>
-                <option>Visualization &amp; Rendering</option>
-                <option>Something else</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="timeline">Timeline</label>
-              <select id="timeline" name="timeline">
-                <option>Just exploring</option>
-                <option>Within 3 months</option>
-                <option>3 to 6 months</option>
-                <option>Flexible</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label for="location">Project location</label>
-            <input type="text" id="location" name="location" placeholder="City, State">
-          </div>
-          <div class="field">
-            <label for="message">Tell us about your project</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="submit">Send inquiry</button>
-          <p class="form-status" id="formStatus"></p>
-        </form>
-
-        <div class="form-success" id="formSuccess">
-          <h3>Thank you.</h3>
-          <p>Your inquiry is on its way. We'll be in touch within two business days.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-mark">Reagan Hack <em>Studio</em></div>
       <div class="foot-links">
-        <a href="#studio">Studio</a>
-        <a href="#services">Services</a>
+        <a href="mailto:hackreagan@outlook.com">Email</a>
         <a href="https://instagram.com/reaganhackstudio" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
@@ -401,52 +433,36 @@
   }, { threshold:.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // form submission (Formspree AJAX)
-  const form = document.getElementById('inquiryForm');
-  const status = document.getElementById('formStatus');
-  const success = document.getElementById('formSuccess');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.submit');
-    const endpoint = form.getAttribute('action');
-
-    // If the Formspree endpoint hasn't been set yet, fall back to email
-    if (endpoint.includes('YOUR_FORM_ID')) {
-      const data = new FormData(form);
-      const body = encodeURIComponent(
-        'Name: ' + data.get('name') + '\n' +
-        'Email: ' + data.get('email') + '\n' +
-        'Project type: ' + data.get('project_type') + '\n' +
-        'Timeline: ' + data.get('timeline') + '\n' +
-        'Location: ' + data.get('location') + '\n\n' +
-        data.get('message')
-      );
-      window.location.href = 'mailto:hackreagan@outlook.com?subject=' +
-        encodeURIComponent('New project inquiry') + '&body=' + body;
-      return;
-    }
-
-    btn.disabled = true;
-    status.textContent = 'Sending…';
-    try {
-      const res = await fetch(endpoint, {
-        method:'POST',
-        body:new FormData(form),
-        headers:{ 'Accept':'application/json' }
-      });
-      if (res.ok){
-        form.style.display = 'none';
-        success.style.display = 'block';
-      } else {
-        status.textContent = 'Something went wrong. Please email us directly.';
-        btn.disabled = false;
-      }
-    } catch(err){
-      status.textContent = 'Something went wrong. Please email us directly.';
-      btn.disabled = false;
-    }
+  // caution tape: repeat the words until one half is wider than the tape, then double it for a seamless loop
+  function fillTapes(){
+    document.querySelectorAll('.tape-track').forEach(track => {
+      const words = track.dataset.words.split('|');
+      const tapeWidth = track.parentElement.offsetWidth;
+      let half = '';
+      const probe = document.createElement('div');
+      probe.style.cssText = 'display:flex;width:max-content';
+      track.innerHTML = '';
+      track.appendChild(probe);
+      do {
+        half += words.map(w => '<span>' + w + '</span>').join('');
+        probe.innerHTML = half;
+      } while (probe.offsetWidth < tapeWidth);
+      track.innerHTML = half + half;
+    });
+  }
+  fillTapes();
+  let tapeWidth = innerWidth;
+  window.addEventListener('resize', () => {
+    if (innerWidth > tapeWidth){ tapeWidth = innerWidth; fillTapes(); }
   });
+  document.fonts && document.fonts.ready.then(fillTapes);
+
+  // reduced motion: freeze the drawing finished, furniture showing
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const desk = document.getElementById('desk');
+    desk.setCurrentTime(7.5);
+    desk.pauseAnimations();
+  }
 </script>
 </body>
 </html>
